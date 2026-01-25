@@ -51,6 +51,7 @@ class B(A):
     varB= " this is class B"
 class C(B): # Multi Lebel inheritage
     varC= " this is class C"
+    
 
 objC=C
 print(objC.varA)
@@ -59,15 +60,36 @@ print(objC.varC)
 
 
 class A:
-    varA= " this is class A"
+    varA= "this is class A"
+    @staticmethod
+    def welcoming(slef):
+        print(slef.varA)
+    
+        
 class B:
-    varB= " this is class B"
+    varB= "this is class B"
+    @staticmethod
+    def welcoming(slef):
+        print(slef.varB)
+
 class C(A,B): # multi inheritance
-    varC= " this is class C"
+    varC= "this is class C"
+    
 
-print(objC.varA)
-print(objC.varB)
-print(objC.varC)
+objc1= C
 
+print(objc1.varA)
+print(objc1.varB)
+print(objc1.varC)
+
+class person :
+    name= "no name"
+    def changeName (self, newName):
+        self.name= newName
+
+prsn=person()
+prsn.changeName("Sohel")
+print(prsn.name)
+print(person.name)
 
 
